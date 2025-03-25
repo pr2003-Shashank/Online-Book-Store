@@ -46,6 +46,13 @@ public class BookController {
 		return bookService.getBookById(id);
 	}
 	
+	// Sample method to retrieve book by ID
+	// No usage only for demontration purpose of git versions 
+	@GetMapping("/{id}")
+	public Book SampleGetBookById(@PathVariable Long id) {
+		return bookService.getBookById(id);
+	}
+	
 	// Endpoint to update an existing book
     @PutMapping("/{id}")
     public Book updateBook(@PathVariable Long id,@RequestBody Book book) {
